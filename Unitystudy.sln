@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36717.8 d17.14
+VisualStudioVersion = 17.14.36717.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unitystudy", "Unitystudy\Unitystudy.csproj", "{989495E2-CFBB-4A7A-8923-D93F9749C7B6}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gugudan", "gugudan\gugudan.csproj", "{A4288242-AFEB-45C5-B1F3-F165D7085AF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "star homework", "star homework\star homework.csproj", "{B7E1F45D-7C28-4ACC-BCBC-A76ED839DCD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sumof1to10", "sumof1to10\sumof1to10.csproj", "{87B25353-A6E4-4A75-87E0-775337357C05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B7E1F45D-7C28-4ACC-BCBC-A76ED839DCD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7E1F45D-7C28-4ACC-BCBC-A76ED839DCD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7E1F45D-7C28-4ACC-BCBC-A76ED839DCD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87B25353-A6E4-4A75-87E0-775337357C05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87B25353-A6E4-4A75-87E0-775337357C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87B25353-A6E4-4A75-87E0-775337357C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87B25353-A6E4-4A75-87E0-775337357C05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
