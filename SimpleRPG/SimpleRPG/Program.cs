@@ -33,7 +33,7 @@
         public Player(string name) : base()
         {
             this.name = name;
-            hp = 1000;
+            hp = 100;
             atk = 10;
         }
 
@@ -87,23 +87,29 @@
         //플레이어 생성
         Player player = new Player(Console.ReadLine());
 
+        //몬스터
+        Monster monster = null;
+
         //게임 루프
         while (!isGameOver)
         {
             //몬스터 스폰
-            Monster monster = new Monster();
+            if (monster == null || monster.IsDead())
+            {
+                monster = new Monster();
+            }
 
             //플레이어 상태 창
             Console.WriteLine("================================================");
-            Console.WriteLine($"| {player.name} | HP: {player.hp} | ATK: {player.atk} | EXP: {player.playerExp} |");
+            Console.WriteLine($"| {player.name, -4} | HP: {player.hp, 4} | ATK: {player.atk, 4} | EXP: {player.playerExp, 4} |");
 
             //몬스터 상태 창
             Console.WriteLine("================================================");
-            Console.WriteLine($"| {monster.name} | HP: {monster.hp} | ATK: {monster.atk} |");
+            Console.WriteLine($"| {monster.name, -4} | HP: {monster.hp, 4} | ATK: {monster.atk, 4} |");
 
             //플레이어가 게임을 계속하고 싶은지 확인
             Console.WriteLine("================================================");
-            Console.Write("계속 싸우시겠습니까? ( Y : 예 / N : 아니오 )  ");
+            Console.Write("계속 싸우시겠습니까? | Y : 예 | N : 아니오 |  ");
 
             //플레이어가 유효한 키를 입력했는지
             bool isValidKey = false;
@@ -146,9 +152,11 @@
             {
                 player.GainExp();
             }
-
-            //몬스터가 플레이어를 공격
-            monster.Attack(player);
+            else
+            {
+                //몬스터가 사망하지 않았다면 플레이어를 공격
+                monster.Attack(player);
+            }
 
             //플레이어 사망 판정, 사망했다면 게임 종료
             if (player.IsDead())
