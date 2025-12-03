@@ -11,7 +11,7 @@
         public int hp;
         public int atk;
 
-        //A가 공격하면 B의 체력을 A의 공격력만큼 감소시킴
+        //this가 공격하면 target의 체력을 this의 공격력만큼 감소시킴
         public void Attack(Character target)
         {
             Console.WriteLine($"{this.name}의 공격! {target.name}에게 {this.atk}만큼 피해를 주었다.");
@@ -29,6 +29,7 @@
 
     class Player : Character
     {
+        //플레이어 생성자
         public Player(string name) : base()
         {
             this.name = name;
@@ -36,9 +37,11 @@
             atk = 10;
         }
 
+        //경험치
         public int playerExp = 0;
         public int expAmount = 10;
 
+        //경험치 획득할 때
         public void GainExp()
         {
             playerExp += expAmount;
@@ -57,9 +60,11 @@
             return names[new Random().Next(names.Length)];
         }
 
+        //몬스터 체력과 공격력 랜덤으로 정해주기
         Random monsterHp = new Random();
         Random monsterAtk = new Random();
 
+        //몬스터 생성자
         public Monster() : base()
         {
             name = RandomName();
@@ -70,7 +75,7 @@
 
     static void Main()
     {
-        //초기화
+        //게임 초기화
         bool isGameOver = false;
 
         Console.Clear();
