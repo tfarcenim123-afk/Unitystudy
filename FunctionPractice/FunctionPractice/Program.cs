@@ -18,14 +18,14 @@
         //}
         static int Sum(int start, int end)
         {
-            int sum = 0;
 
-            for (int i = start; i <= end; i++)
+            if (start > end)
             {
-                sum += i;
+                return 0;
             }
 
-            return sum;
+            return end + Sum(start, end - 1);
+
         }
         static void Main()
         {
