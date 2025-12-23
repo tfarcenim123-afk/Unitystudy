@@ -50,19 +50,23 @@
         }
 
         
-        public void Dequeue() // Front에서 데이터를 제거합니다.
+        public int Dequeue() // Front에서 데이터를 제거하고 반환합니다.
         {
             if (_container.Count == 0)
             {
                 Console.WriteLine("Queue is empty. Cannot Dequeue.");
-                return;
+                return 0;
             }
+
+            int temp = _front.Value;
 
             _container.RemoveFirst();
 
             _front = _container.First;
 
             _count--;
+
+            return temp;
         }
     }
 
@@ -95,13 +99,11 @@
             Console.WriteLine($"카운트: {myQueue.Count}");
             Console.WriteLine($"픽: {myQueue.Peek()}");
 
-            Console.WriteLine("디큐");
-            myQueue.Dequeue();
+            Console.WriteLine($"디큐: {myQueue.Dequeue()}");
             Console.WriteLine($"카운트: {myQueue.Count}");
             Console.WriteLine($"픽: {myQueue.Peek()}");
 
-            Console.WriteLine("디큐");
-            myQueue.Dequeue();
+            Console.WriteLine($"디큐: {myQueue.Dequeue()}");
             Console.WriteLine($"카운트: {myQueue.Count}");
             Console.WriteLine($"픽: {myQueue.Peek()}");
         }
